@@ -1,0 +1,27 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a {
+    color: rgba(17, 41, 41, 0.247);
+    font-size: 70px;
+    text-decoration: none;
+}
+a:hover {
+    color: #ff0000;
+}
+img {
+    width: 500px;
+}
+.cool-img {
+    width: 200px;
+}
+.menu {
+    width: 300px;
+}
+.menu-2 {
+    position: relative;
+    right: 4px;
+}
+
