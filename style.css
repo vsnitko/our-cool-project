@@ -1,27 +1,129 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-a {
-    color: rgba(17, 41, 41, 0.247);
-    font-size: 70px;
-    text-decoration: none;
-}
-a:hover {
-    color: #ff0000;
-}
-img {
-    width: 500px;
-}
-.cool-img {
-    width: 200px;
-}
-.menu {
-    width: 300px;
-}
-.menu-2 {
-    position: relative;
-    right: 4px;
+    margin: 0; /* Убираем отступы по умолчанию */
+    padding: 0; /* Убираем внутренние отступы по умолчанию */
+    box-sizing: border-box; /* Устанавливаем box-sizing, чтобы размеры включали отступы и рамки */
 }
 
+a {
+    color: rgba(159, 159, 159); /* Цвет ссылок */
+    font-size: 45px; /* Размер шрифта для ссылок */
+    text-decoration: none; /* Убираем подчеркивание у ссылок */
+}
+
+a:hover {
+    color: #FF69B4; /* Цвет ссылки при наведении */
+}
+
+img {
+    width: 500px; /* Ширина всех изображений */
+}
+
+.cool-img {
+    width: 200px; /* Ширина для изображения с классом cool-img */
+}
+
+.menu {
+    width: 300px; /* Ширина для изображений с классом menu */
+}
+
+.menu-2 {
+    position: relative; /* Устанавливаем относительное позиционирование для menu-2 */
+    right: 4px; /* Сдвигаем на 4px вправо */
+}
+
+@font-face {
+    font-family: 'Cute Notes'; /* Название шрифта */
+    src: url('fonts/CuteNotes.ttf') format('truetype'); /* Путь к файлу шрифта */
+    font-weight: normal; /* Нормальный вес шрифта */
+    font-style: normal; /* Нормальный стиль шрифта */
+}
+
+@font-face {
+    font-family: 'Gardens'; /* Название шрифта */
+    src: url('fonts/Gardens.ttf') format('truetype'); /* Путь к файлу шрифта */
+    font-weight: normal; /* Нормальный вес шрифта */
+    font-style: normal; /* Нормальный стиль шрифта */
+}
+
+body {
+    font-family: 'Gardens', cursive; /* Шрифт для всего тела страницы */
+    margin: 0; /* Убираем отступы у body */
+    background-color: #E6E6FA; /* Цвет фона страницы */
+}
+
+header {
+    font-family: 'Cute Notes', cursive; /* Шрифт для шапки */
+    background-color: #f8f9fa; /* Цвет фона шапки */
+    padding: 10px 20px; /* Отступы сверху и снизу, а также слева и справа */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Тень для шапки */
+}
+
+.header-content {
+    display: flex; /* Используем Flexbox для размещения элементов в строку */
+    align-items: center; /* Выравнивание элементов по вертикали по центру */
+    justify-content: space-between; /* Распределение пространства между элементами */
+}
+
+h1 {
+    font-size: 55px; /* Размер шрифта заголовка */
+    color: #C71585; /* Цвет текста заголовка */
+    margin: 0; /* Убираем отступы у заголовка */
+    flex-grow: 1; /* Позволяет заголовку занимать доступное пространство */
+    text-align: center; /* Центрируем текст заголовка */
+}
+
+.github-link {
+    margin-right: 10px; /* Отступ справа от иконки GitHub */
+}
+
+.github-icon {
+    width: 50px; /* Ширина иконки GitHub */
+    height: 50px; /* Высота иконки GitHub */
+    transition: 0.3s ease; /* Плавное изменение при наведении */
+}
+
+.github-link:hover .github-icon {
+    content: url('images/giticon2.png'); /* Изменение картинки при наведении */
+}
+
+.button-container {
+    display: flex; /* Используем Flexbox для кнопок */
+    gap: 10px; /* Пробел между кнопками */
+}
+
+.register-button {
+    background-color: #C71585; /* Цвет фона кнопки регистрации */
+    border: none; /* Без рамки */
+    color: white; /* Цвет текста */
+    padding: 10px 20px; /* Отступы (верх/низ, лево/право) */
+    text-align: center; /* Центрирование текста */
+    text-decoration: none; /* Убираем подчеркивание */
+    display: inline-block; /* Отображение в строчном блоке */
+    font-size: 16px; /* Размер шрифта кнопки */
+    cursor: pointer; /* Указатель при наведении */
+    border-radius: 5px; /* Закругленные углы */
+    transition: background-color 0.3s; /* Плавный переход цвета фона */
+}
+
+.register-button:hover {
+    background-color: #FF69B4; /* Цвет фона кнопки регистрации при наведении */
+}
+
+.login-button {
+    background-color: transparent; /* Без заливки */
+    border: 2px solid #C71585; /* Розовая обводка */
+    color: #C71585; /* Цвет текста - тоже розовый */
+    padding: 10px 20px; /* Отступы (верх/низ, лево/право) */
+    text-align: center; /* Центрирование текста */
+    text-decoration: none; /* Без подчеркивания */
+    display: inline-block; /* Отображение в строчном блоке */
+    font-size: 16px; /* Размер шрифта */
+    cursor: pointer; /* Указатель при наведении */
+    border-radius: 5px; /* Закругленные углы */
+    transition: background-color 0.3s, color 0.3s; /* Плавный переход для фона и цвета текста */
+}
+
+.login-button:hover {
+    background-color: #C71585; /* Цвет фона кнопки при наведении */
+    color: white; /* Цвет текста при наведении */
+}
